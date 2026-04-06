@@ -1,44 +1,48 @@
-# Taranpreet Singh Mander - Cybersecurity Portfolio
+# Taranpreet Singh Mander
 
-Personal portfolio for a 3rd-year B.E. Information Security student, focused on practical security engineering, secure development, and applied cryptography.
+3rd Year B.E. Information Security student focused on cybersecurity, secure development, and applied cryptography.
 
 ## Live Portfolio
-- URL: https://Taranpreetsingh077.github.io/portfolio
+- https://Taranpreetsingh077.github.io/portfolio
 
-## Profile
+## About
 - Name: Taranpreet Singh Mander
 - Email: mickymander2@gmail.com
 - GitHub: https://github.com/Taranpreetsingh077
 - LinkedIn: https://www.linkedin.com/in/taran-mander-3910b6401/
 
+## What’s in the portfolio
+- Hero section with animated intro
+- About section with profile and stats
+- Skills section with technical strengths
+- 6 featured security projects
+- Learning and experience timeline
+- Contact links and social profiles
+
 ## Featured Projects
-- Secure Authentication System
-- Network Traffic Analyzer and IDS
-- Web Vulnerability Scanner
-- Modern Encryption Toolkit
-- API Security Tester
-- End-to-End Encrypted File Share
+1. Secure Authentication System
+2. Network Traffic Analyzer & IDS
+3. Web Vulnerability Scanner
+4. Modern Encryption Toolkit
+5. API Security Tester
+6. End-to-End Encrypted File Share
 
-## Tech Stack
-- Frontend: HTML5, CSS3, JavaScript
-- Security: OWASP concepts, auth hardening, encryption workflows
-- Tools: Wireshark, Burp Suite, Nmap, Git, Linux
-- Languages: Python, JavaScript, C++, Bash
+## Core Skills
+- Python, JavaScript, C++, Bash
+- OWASP, authentication security, API security
+- Cryptography, network analysis, secure code review
+- Wireshark, Burp Suite, Nmap, Git, Linux
 
-## Local Run
+## Local Preview
 ```bash
-# Option 1
-Open index.html directly in browser
-
-# Option 2
 python -m http.server 8000
 ```
 Then open http://localhost:8000
 
-## Repository Structure
-- `index.html` - Main portfolio page
-- `styles.css` - Visual design and responsive layout
-- `script.js` - Interactivity and animations
+## Repository Files
+- index.html
+- styles.css
+- script.js
 
-## Notes
-This repository is configured for GitHub Pages deployment from `main` branch.
+## Deployment
+This repository is deployed from the `main` branch using GitHub Pages.
