@@ -186,6 +186,16 @@ a:hover {
     margin-top: 60px;
 }
 
+.hero-layout {
+    position: relative;
+    z-index: 2;
+    width: min(1200px, calc(100% - 40px));
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+    align-items: center;
+}
+
 .particles {
     position: absolute;
     width: 100%;
@@ -213,8 +223,8 @@ a:hover {
 .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    max-width: 900px;
+    text-align: left;
+    max-width: 680px;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -271,9 +281,210 @@ a:hover {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     animation: slideInUp 0.8s ease-out 0.5s both;
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.85;
+    animation: float 7s ease-in-out infinite;
+}
+
+.hero-orb-one {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255, 59, 48, 0.35) 0%, rgba(255, 59, 48, 0) 70%);
+    top: 8%;
+    right: 8%;
+}
+
+.hero-orb-two {
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.35) 0%, rgba(29, 78, 216, 0) 70%);
+    left: 4%;
+    bottom: 10%;
+    animation-delay: 1.2s;
+}
+
+.hero-display {
+    position: relative;
+    width: min(100%, 520px);
+    padding: 1.2rem;
+    border-radius: 24px;
+    background: rgba(10, 14, 39, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out 0.25s both;
+}
+
+.hero-display::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 59, 48, 0.08), rgba(29, 78, 216, 0.08));
+    pointer-events: none;
+}
+
+.display-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.display-dots {
+    display: flex;
+    gap: 0.45rem;
+}
+
+.display-dots span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.display-dots span:nth-child(1) {
+    background: var(--primary-neon);
+}
+
+.display-dots span:nth-child(2) {
+    background: var(--secondary-neon);
+}
+
+.display-dots span:nth-child(3) {
+    background: var(--accent-purple);
+}
+
+.display-title-small {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.display-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 1rem;
+}
+
+.code-panel {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.code-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.code-key {
+    color: var(--primary-neon);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.code-value {
+    color: var(--text-secondary);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+}
+
+.signal-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.65rem;
+    padding-top: 0.25rem;
+}
+
+.signal-grid span {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 59, 48, 0.18), rgba(29, 78, 216, 0.18));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 14px rgba(255, 255, 255, 0.04);
+    animation: glow 4s ease-in-out infinite;
+}
+
+.signal-grid span:nth-child(3n) {
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.3), rgba(255, 59, 48, 0.12));
+    animation-delay: 0.4s;
+}
+
+.signal-grid span:nth-child(4n) {
+    animation-delay: 0.8s;
+}
+
+.floating-stat {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.9rem 1rem;
+    min-width: 190px;
+    border-radius: 18px;
+    background: rgba(5, 8, 18, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+    animation: float 5.8s ease-in-out infinite;
+}
+
+.floating-stat i {
+    font-size: 1.2rem;
+    color: var(--primary-neon);
+}
+
+.floating-stat strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.floating-stat span {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.floating-stat-one {
+    top: 12%;
+    left: 2%;
+}
+
+.floating-stat-two {
+    right: 0;
+    bottom: 10%;
+    animation-delay: 1s;
 }
 
 /* About Section */
@@ -1016,6 +1227,36 @@ a:hover {
 
     .hero {
         margin-top: 60px;
+        height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        width: calc(100% - 32px);
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .floating-stat-one {
+        left: 0;
+        top: 6%;
+    }
+
+    .floating-stat-two {
+        right: 0;
+        bottom: 4%;
     }
 
     .about-grid {
