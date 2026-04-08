@@ -1,15 +1,15 @@
 /* Root Variables */
 :root {
-    --primary-neon: #00ff88;
-    --secondary-neon: #00ffff;
-    --accent-purple: #9d4edd;
+    --primary-neon: #ff3b30;
+    --secondary-neon: #1d4ed8;
+    --accent-purple: #2563eb;
     --dark-bg: #0a0e27;
     --darker-bg: #050812;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --text-primary: #ffffff;
     --text-secondary: #b0b3ff;
-    --neon-glow: 0 0 20px rgba(0, 255, 136, 0.5);
+    --neon-glow: 0 0 20px rgba(255, 59, 48, 0.5);
     --transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -52,7 +52,7 @@ a {
 
 a:hover {
     color: var(--secondary-neon);
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    text-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
 }
 
 /* Buttons */
@@ -73,12 +73,12 @@ a:hover {
     background: linear-gradient(135deg, var(--primary-neon), var(--secondary-neon));
     color: var(--darker-bg);
     border-color: var(--primary-neon);
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+    box-shadow: 0 0 30px rgba(255, 59, 48, 0.6);
 }
 
 .btn-secondary {
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(255, 59, 48, 0.1);
     box-shadow: var(--neon-glow);
     transform: translateY(-3px);
 }
@@ -200,7 +200,7 @@ a:hover {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 59, 48, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -231,7 +231,7 @@ a:hover {
     font-size: clamp(2.5rem, 8vw, 5rem);
     margin-bottom: 1rem;
     line-height: 1.2;
-    background: linear-gradient(135deg, var(--primary-neon) 0%, var(--secondary-neon) 50%, #9d4edd 100%);
+    background: linear-gradient(135deg, var(--primary-neon) 0%, var(--secondary-neon) 55%, var(--accent-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -289,7 +289,7 @@ a:hover {
     left: 0;
     right: 0;
     height: 300px;
-    background: linear-gradient(180deg, rgba(0, 255, 136, 0.05) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(255, 59, 48, 0.05) 0%, transparent 100%);
     pointer-events: none;
 }
 
@@ -361,7 +361,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 255, 255, 0.1));
+    background: linear-gradient(135deg, rgba(255, 59, 48, 0.1), rgba(29, 78, 216, 0.1));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -396,7 +396,7 @@ a:hover {
 /* Skills Section */
 .skills {
     padding: 100px 0;
-    background: linear-gradient(180deg, rgba(0, 255, 136, 0.02) 0%, rgba(0, 255, 255, 0.02) 100%);
+    background: linear-gradient(180deg, rgba(255, 59, 48, 0.02) 0%, rgba(29, 78, 216, 0.02) 100%);
 }
 
 .skills-grid {
@@ -444,7 +444,7 @@ a:hover {
 
 .skill-bar {
     height: 6px;
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(255, 59, 48, 0.1);
     border-radius: 3px;
     overflow: hidden;
 }
@@ -454,7 +454,7 @@ a:hover {
     background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
     border-radius: 3px;
     animation: progressBar 1s ease-out;
-    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
 }
 
 .skill-icons {
@@ -469,18 +469,18 @@ a:hover {
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    background: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    background: rgba(255, 59, 48, 0.05);
+    border: 1px solid rgba(255, 59, 48, 0.2);
     border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
 }
 
 .tool-icon:hover {
-    background: rgba(0, 255, 136, 0.15);
+    background: rgba(255, 59, 48, 0.15);
     border-color: var(--primary-neon);
     transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 15px rgba(255, 59, 48, 0.3);
 }
 
 .tool-icon i {
@@ -528,7 +528,7 @@ a:hover {
     right: -50%;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.2), transparent);
+    background: radial-gradient(circle, rgba(255, 59, 48, 0.2), transparent);
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -555,7 +555,7 @@ a:hover {
 .project-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 255, 255, 0.2));
+    background: linear-gradient(135deg, rgba(255, 59, 48, 0.2), rgba(29, 78, 216, 0.2));
     border: 1px solid var(--primary-neon);
     border-radius: 10px;
     display: flex;
@@ -579,7 +579,7 @@ a:hover {
     display: inline-block;
     font-size: 0.75rem;
     color: var(--secondary-neon);
-    background: rgba(0, 255, 255, 0.1);
+    background: rgba(29, 78, 216, 0.1);
     padding: 4px 10px;
     border-radius: 20px;
     text-transform: uppercase;
@@ -608,15 +608,15 @@ a:hover {
 .tech-tag {
     font-size: 0.8rem;
     padding: 4px 12px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    background: rgba(255, 59, 48, 0.1);
+    border: 1px solid rgba(255, 59, 48, 0.3);
     border-radius: 20px;
     color: var(--primary-neon);
     transition: var(--transition);
 }
 
 .tech-tag:hover {
-    background: rgba(0, 255, 136, 0.2);
+    background: rgba(255, 59, 48, 0.2);
     border-color: var(--primary-neon);
 }
 
@@ -630,8 +630,8 @@ a:hover {
 .project-link {
     flex: 1;
     padding: 0.75rem;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    background: rgba(255, 59, 48, 0.1);
+    border: 1px solid rgba(255, 59, 48, 0.3);
     border-radius: 8px;
     text-align: center;
     font-size: 0.9rem;
@@ -643,7 +643,7 @@ a:hover {
 }
 
 .project-link:hover {
-    background: rgba(0, 255, 136, 0.2);
+    background: rgba(255, 59, 48, 0.2);
     border-color: var(--primary-neon);
     transform: translateX(3px);
 }
@@ -651,7 +651,7 @@ a:hover {
 /* Learning Section */
 .learning {
     padding: 100px 0;
-    background: linear-gradient(180deg, rgba(0, 255, 255, 0.02) 0%, rgba(157, 78, 221, 0.02) 100%);
+    background: linear-gradient(180deg, rgba(29, 78, 216, 0.02) 0%, rgba(37, 99, 235, 0.02) 100%);
 }
 
 .learning-content {
@@ -789,7 +789,7 @@ a:hover {
 .contact-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 255, 255, 0.2));
+    background: linear-gradient(135deg, rgba(255, 59, 48, 0.2), rgba(29, 78, 216, 0.2));
     border: 1px solid var(--primary-neon);
     border-radius: 10px;
     display: flex;
@@ -842,8 +842,8 @@ a:hover {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-neon);
-    background: rgba(0, 255, 136, 0.05);
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+    background: rgba(255, 59, 48, 0.05);
+    box-shadow: 0 0 15px rgba(255, 59, 48, 0.2);
 }
 
 .contact-form input::placeholder,
@@ -958,19 +958,19 @@ a:hover {
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+        box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
     }
     50% {
-        box-shadow: 0 0 0 8px rgba(0, 255, 136, 0);
+        box-shadow: 0 0 0 8px rgba(255, 59, 48, 0);
     }
 }
 
 @keyframes glow {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        box-shadow: 0 0 20px rgba(255, 59, 48, 0.5);
     }
     50% {
-        box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+        box-shadow: 0 0 30px rgba(255, 59, 48, 0.8);
     }
 }
 
@@ -1011,7 +1011,7 @@ a:hover {
 
     .nav-link:hover {
         border-left-color: var(--primary-neon);
-        background: rgba(0, 255, 136, 0.05);
+        background: rgba(255, 59, 48, 0.05);
     }
 
     .hero {
