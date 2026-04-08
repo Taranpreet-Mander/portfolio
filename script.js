@@ -42,6 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!motionReduced) {
+        const revealTargets = document.querySelectorAll(
+            'section, .project-card, .skill-card, .feature-item, .stat-item, .contact-item, .education-item, .learning-box'
+        );
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+        revealTargets.forEach((element, index) => {
+            element.style.transitionDelay = `${Math.min(index * 45, 280)}ms`;
+            revealObserver.observe(element);
+        });
+    } else {
+        document.querySelectorAll('section').forEach(section => section.classList.add('is-visible'));
+    }
 });
 
 // ==================== CONTACT FORM ====================
@@ -95,50 +119,23 @@ function animateSkillBars() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fillBar 1.5s ease-out forwards';
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    skillBars.forEach(bar => observer.observe(bar));
+    skillBars.forEach(bar => {
+        const finalWidth = bar.style.width || getComputedStyle(bar).width;
+        bar.style.setProperty('--final-width', finalWidth);
+        bar.style.width = '0';
+        observer.observe(bar);
+    });
 }
-
-// Add animation keyframes
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fillBar {
-        from {
-            width: 0 !important;
-        }
-        to {
-            width: var(--final-width, 100%) !important;
-        }
-    }
-    
-    @keyframes slideInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // Call on load
 window.addEventListener('load', () => {
     animateSkillBars();
-    
-    // Add slide-in animation to cards
-    const cards = document.querySelectorAll('.project-card, .skill-card, .feature-item');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.animation = `slideInUp 0.6s ease-out ${index * 0.1}s forwards`;
-    });
 });
 
 // ==================== SCROLL REVEAL ====================
@@ -148,18 +145,12 @@ const revealElements = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-visible');
             }
         });
     }, { threshold: 0.1 });
 
-    elements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease';
-        observer.observe(el);
-    });
+    elements.forEach(el => observer.observe(el));
 };
 
 window.addEventListener('load', revealElements);
