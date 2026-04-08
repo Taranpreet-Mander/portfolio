@@ -996,6 +996,7 @@ section .container {
     display: flex;
     margin-bottom: 2rem;
     position: relative;
+    padding-left: 0.35rem;
 }
 
 .timeline-marker {
@@ -1008,6 +1009,10 @@ section .container {
     border: 2px solid var(--primary-neon);
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
+}
+
+.timeline-content {
+    margin-left: 1.15rem;
 }
 
 .timeline-content h4 {
