@@ -60,9 +60,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 
         revealTargets.forEach((element, index) => {
-            element.style.transitionDelay = `${Math.min(index * 45, 280)}ms`;
+            element.style.transitionDelay = `${Math.min(index * 70, 420)}ms`;
             revealObserver.observe(element);
         });
+
+        const heroSection = document.querySelector('.hero-section');
+        const heroText = document.querySelector('.hero-text');
+        const heroStats = document.querySelector('.hero-stats');
+
+        if (heroSection && heroText && heroStats) {
+            let ticking = false;
+
+            const updateHeroMotion = () => {
+                const scrollY = window.scrollY || window.pageYOffset;
+                const offset = Math.min(scrollY * 0.06, 28);
+                const reverseOffset = Math.min(scrollY * 0.03, 16);
+
+                heroText.style.transform = `translateY(${reverseOffset}px)`;
+                heroStats.style.transform = `translateY(${-offset}px)`;
+                heroSection.style.setProperty('--hero-shift', `${offset}px`);
+                ticking = false;
+            };
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateHeroMotion);
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
     } else {
         document.querySelectorAll('section').forEach(section => section.classList.add('is-visible'));
     }
