@@ -9,13 +9,13 @@ My personal portfolio site — built with plain HTML, CSS and JavaScript (no fra
 - Focus: blue team / detection engineering, network security, and security tooling
 
 ## Featured projects (linked on the site)
-- [Home Detection Lab](https://github.com/Taranpreetsingh077/home-detection-lab)
-- [SOC Automation Lab](https://github.com/Taranpreetsingh077/soc-automation-lab)
-- [Network Traffic Analyzer](https://github.com/Taranpreetsingh077/network-traffic-analyzer)
+- [Home Detection Lab](https://github.com/Taranpreet-Mander/home-detection-lab)
+- [SOC Automation Lab](https://github.com/Taranpreet-Mander/soc-automation-lab)
+- [Network Traffic Analyzer](https://github.com/Taranpreet-Mander/network-traffic-analyzer)
 
 ## Run locally
 It's a single self-contained file — just open `index.html` in a browser.
 
 ## Contact
-- GitHub: https://github.com/Taranpreetsingh077
+- GitHub: https://github.com/Taranpreet-Mander
 - LinkedIn: https://www.linkedin.com/in/taran-mander-3910b6401/
