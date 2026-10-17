@@ -2,7 +2,7 @@
 
 My personal portfolio site — built with plain HTML, CSS and JavaScript (no framework), with an interactive canvas background and scroll animations.
 
-**Live:** https://taranpreetsingh077.github.io/portfolio/
+**Live:** https://taranpreet-mander.github.io/portfolio
 
 ## About
 - Taranpreet Singh Mander — B.E. Information Security student
