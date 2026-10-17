@@ -19,6 +19,11 @@ My personal portfolio site — built with plain HTML, CSS and JavaScript (no fra
 ## Run locally
 It's a single self-contained file — just open `index.html` in a browser.
 
-## Contact
+## Portfolio and Contact
+- Portfolio: https://taranpreet-mander.github.io/portfolio
 - GitHub: https://github.com/Taranpreet-Mander
 - LinkedIn: https://www.linkedin.com/in/taran-mander-3910b6401/
+- Email: mickymander2@gmail.com
+
+## Current Goal
+Open to internships and collaborations in cybersecurity, secure backend systems, and security tooling.
