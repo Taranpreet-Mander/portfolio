@@ -25,5 +25,3 @@ It's a single self-contained file — just open `index.html` in a browser.
 - LinkedIn: https://www.linkedin.com/in/taran-mander-3910b6401/
 - Email: mickymander2@gmail.com
 
-## Current Goal
-Open to internships and collaborations in cybersecurity, secure backend systems, and security tooling.
